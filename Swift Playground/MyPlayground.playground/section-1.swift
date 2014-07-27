@@ -13,11 +13,11 @@ let inputNSString = inputString as NSString
 
 let seqLen = countElements(inputString)
 let centers = (seqLen * 2) + 1
-var palindromeLengths: Int[] = []
+var palindromeLengths: [Int] = []
 var longestPalindromeLength = 0
 var longestPalindrome = ""
 
-for index in 0..centers {
+for index in 0..<centers {
     var leftIndex = index/2 - 1
     var rightIndex = index - index/2 // Integer division alternate: Int(ceil(Double(index)/Double(2)))
     var palindromeLength = index%2
